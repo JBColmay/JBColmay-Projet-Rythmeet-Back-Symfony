@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Concert{% endblock %}
+
+{% block body %}
+    <h1 class="d-flex justify-content-center mt-5">Créer un nouveau concert</h1>
+
+    {{ include('concert_admin/_form.html.twig') }}
+
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6">
+    <a href="{{ path('app_concert_admin_index') }}" class="btn btn-dark">Retour</a>
+    </div>
+    </div>
+    </div>
+{% endblock %}

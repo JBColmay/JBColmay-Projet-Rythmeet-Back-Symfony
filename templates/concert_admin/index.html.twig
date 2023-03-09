@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concerts{% endblock %}
+
+{% block body %}
+    <h1 class="d-flex justify-content-center mt-5">Liste des concerts</h1>
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-2">
+    <a href="{{ path('app_concert_admin_new') }}" class="btn btn-success">Créer un nouveau concert</a>
+    </div>
+    </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Artist_name</th>
+                <th>Date</th>
+                <th>Place</th>
+                <th>Created_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for concert in concerts %}
+            <tr>
+                <td>{{ concert.id }}</td>
+                <td>{{ concert.artistName }}</td>
+                <td>{{ concert.date ? concert.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ concert.place }}</td>
+                <td>{{ concert.createdAt ? concert.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                
+                    <a href="{{ path('app_concert_admin_show', {'id': concert.id}) }}" class="btn btn-primary">Voir</a>
+                    <a href="{{ path('app_concert_admin_edit', {'id': concert.id}) }}" class="btn btn-warning">Modifier</a>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

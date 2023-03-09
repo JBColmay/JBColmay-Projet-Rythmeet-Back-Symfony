@@ -1,0 +1,8 @@
+# config/routes.yaml
+api_login_check:
+  path: /api/login_check
+
+concerts_list:
+  path: /concerts
+  controller: App\Controller\ConcertController::concertsList
+  methods: GET

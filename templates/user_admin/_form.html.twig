@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+			<div class="form-group">
+				{{ form_label(form.name, 'Nom', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.firstname, 'Prénom', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.pseudo, 'Pseudo', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.pseudo, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.gender, 'Genre', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.gender, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.date_of_birth, 'Date de naissance', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.date_of_birth, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.img, 'Image', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.img, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.bio, 'Biographie', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.bio, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.email, 'Adresse e-mail', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.password, 'Mot de passe', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.roles, 'Rôles', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.roles, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				{{ form_label(form.created_at, 'Date de création', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+				<div class="col-sm-10">
+					{{ form_widget(form.created_at, {'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">Enregistrer</button>
+				</div>
+			</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+</div>
+
